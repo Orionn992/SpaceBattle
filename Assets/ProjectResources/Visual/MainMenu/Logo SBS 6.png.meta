@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: 538234f191f73734083e98d6b2f0fd80
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6195674050507872652
+    second: Logo SBS 6_0
+  - first:
+      213: 8793114116629601555
+    second: Logo SBS 6_1
+  - first:
+      213: 2820254658046499492
+    second: Logo SBS 6_2
+  - first:
+      213: -7804903352751062883
+    second: Logo SBS 6_3
+  - first:
+      213: 3805887711220061140
+    second: Logo SBS 6_4
+  - first:
+      213: 8518308565156797796
+    second: Logo SBS 6_5
+  - first:
+      213: 489243333974651704
+    second: Logo SBS 6_6
+  - first:
+      213: 3224724977642310908
+    second: Logo SBS 6_7
+  - first:
+      213: -6611736452890835011
+    second: Logo SBS 6_8
+  - first:
+      213: 5790851867179496679
+    second: Logo SBS 6_9
+  - first:
+      213: 2938501530366179484
+    second: Logo SBS 6_10
+  - first:
+      213: -3895277291014700278
+    second: Logo SBS 6_11
+  - first:
+      213: -4140812359460028407
+    second: Logo SBS 6_12
+  - first:
+      213: -5891556130116105887
+    second: Logo SBS 6_13
+  - first:
+      213: -2970038983419660794
+    second: Logo SBS 6_14
+  - first:
+      213: -4860857592777560219
+    second: Logo SBS 6_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Logo SBS 6_0
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 569
+        width: 204
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8990ac09b47bf550800000000000000
+      internalID: 6195674050507872652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo SBS 6_1
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 489
+        width: 221
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31d1e2f73ba670a70800000000000000
+      internalID: 8793114116629601555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo SBS 6_2
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 570
+        width: 195
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4aa900d4bae832720800000000000000
+      internalID: 2820254658046499492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo SBS 6_3
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 569
+        width: 180
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d908409b0c96fa390800000000000000
+      internalID: -7804903352751062883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo SBS 6_4
+      rect:
+        serializedVersion: 2
+        x: 1252
+        y: 569
+        width: 184
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d3db4a75ba31d430800000000000000
+      internalID: 3805887711220061140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo SBS 6_5
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 107
+        width: 238
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46d9651128c173670800000000000000
+      internalID: 8518308565156797796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo SBS 6_6
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 103
+        width: 145
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 833794a58342ac600800000000000000
+      internalID: 489243333974651704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo SBS 6_7
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 103
+        width: 146
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfc03b6284680cc20800000000000000
+      internalID: 3224724977642310908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo SBS 6_8
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 107
+        width: 120
+        height: 311
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db7c0f00ab46e34a0800000000000000
+      internalID: -6611736452890835011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo SBS 6_9
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 107
+        width: 236
+        height: 311
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e4342a871d3d5050800000000000000
+      internalID: 5790851867179496679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo SBS 6_10
+      rect:
+        serializedVersion: 2
+        x: 1563
+        y: 346
+        width: 67
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c98fa61b297a7c820800000000000000
+      internalID: 2938501530366179484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo SBS 6_11
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 102
+        width: 195
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a034c6f11f131f9c0800000000000000
+      internalID: -3895277291014700278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo SBS 6_12
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 102
+        width: 184
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90086d81911e886c0800000000000000
+      internalID: -4140812359460028407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo SBS 6_13
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 102
+        width: 159
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 169872a1aecfc3ea0800000000000000
+      internalID: -5891556130116105887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo SBS 6_14
+      rect:
+        serializedVersion: 2
+        x: 1539
+        y: 107
+        width: 115
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6067530d74d48c6d0800000000000000
+      internalID: -2970038983419660794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Logo SBS 6_15
+      rect:
+        serializedVersion: 2
+        x: 1661
+        y: 21
+        width: 221
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56fabb6f5c3ca8cb0800000000000000
+      internalID: -4860857592777560219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Logo SBS 6_0: 6195674050507872652
+      Logo SBS 6_1: 8793114116629601555
+      Logo SBS 6_10: 2938501530366179484
+      Logo SBS 6_11: -3895277291014700278
+      Logo SBS 6_12: -4140812359460028407
+      Logo SBS 6_13: -5891556130116105887
+      Logo SBS 6_14: -2970038983419660794
+      Logo SBS 6_15: -4860857592777560219
+      Logo SBS 6_2: 2820254658046499492
+      Logo SBS 6_3: -7804903352751062883
+      Logo SBS 6_4: 3805887711220061140
+      Logo SBS 6_5: 8518308565156797796
+      Logo SBS 6_6: 489243333974651704
+      Logo SBS 6_7: 3224724977642310908
+      Logo SBS 6_8: -6611736452890835011
+      Logo SBS 6_9: 5790851867179496679
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
