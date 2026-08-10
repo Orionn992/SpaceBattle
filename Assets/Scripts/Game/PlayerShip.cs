@@ -1,7 +1,7 @@
 using UnityEngine;
 using UniRx;
-using System.Runtime.CompilerServices;
 using System;
+using UnityEngine.SceneManagement;
 
 public class PlayerShip : MonoBehaviour
 {
@@ -24,6 +24,11 @@ public class PlayerShip : MonoBehaviour
     [HideInInspector] public ReactiveProperty<int> _health = new ReactiveProperty<int>();
     private void Awake()
     {
+        if(Controller.Instance == null)
+        {
+            SceneManager.LoadScene(0);
+            return;
+        }
         _rigidbody = GetComponent<Rigidbody2D>();
         _mR = GetComponent<MeshRenderer>();
         _controller = Controller.Instance;
@@ -32,6 +37,11 @@ public class PlayerShip : MonoBehaviour
     }
     private void Start()
     {
+            if (Controller.Instance == null)
+    {
+        SceneManager.LoadScene(0);
+        return;
+    }
         _controller.UpdateCameraSettings();
         _health.Value = _maxHealth;
     }
@@ -61,6 +71,8 @@ public class PlayerShip : MonoBehaviour
         float moveVert = Input.GetAxis("Vertical");
         _rigidbody.linearVelocity = Vector2.Lerp(_rigidbody.linearVelocity, new Vector2(moveHor * _speed * 1.2f, moveVert * _speed), _smothness);
         transform.position = CheckBoardWorld();
+        var targetRotation = Quaternion.Euler(0, 180 + (-moveHor * _shipRollEuler), 0);
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, _shipRollSpeed * Time.deltaTime);
     }
     private Vector3 CheckBoardWorld()
     {
@@ -70,5 +82,26 @@ public class PlayerShip : MonoBehaviour
         x = Mathf.Clamp(x, _controller.LeftDownPoint.x + _sizeWorldShip.x, _controller.RightDownPoint.x - _sizeWorldShip.x);
         y = Mathf.Clamp(y, _controller.LeftDownPoint.y + _sizeWorldShip.y, _controller.LeftUpPoint.y - _sizeWorldShip.y);
         return new Vector3(x, y, 0);
+    }
+    public void DamageMe(int damage)
+    {
+        _health.Value -= damage;
+        if (_health.Value <= 0)
+        {
+            var tr = transform;
+            var position = tr.position;
+            gameObject.SetActive(false);
+            _controller.GameOver();
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        var obj = collision.gameObject;
+        if (obj.CompareTag("EnemyBullet"))
+        {
+            var bull = obj.GetComponent<Bullet>();
+            DamageMe(bull._damage);
+            bull.HitMe();
+        }
     }
 }

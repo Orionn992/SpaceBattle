@@ -20,13 +20,31 @@ public class Bullet : MonoBehaviour
     }
     private IEnumerator Move()
     {
-        while (transform.position.y < _goTo)
+        if (_isEnemy)
+        {
+                while (transform.position.y > -_goTo)
+            {
+                transform.position -= new Vector3(0, Time.deltaTime * _speed, 0);
+                yield return null;
+            }
+        }
+        else
+        {
+            while (transform.position.y < _goTo)
         {
             transform.position += new Vector3(0, Time.deltaTime * _speed, 0);
             yield return null;
         }
+        }
+        
         _putMe.OnNext(this);
     }
+
+    public void HitMe()
+    {
+        _putMe.OnNext(this);
+    }
+
     private void OnDisable()
     {
         StopAllCoroutines();

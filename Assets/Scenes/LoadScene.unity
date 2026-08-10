@@ -272,6 +272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Controller
   _musicSource: {fileID: 1530853296}
   _effectSource: {fileID: 1153567420}
+  _myShip: {fileID: 0}
 --- !u!1 &1153567419
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,7 +447,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: fb74b9de65dd4d1409d8968b994be63a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.069
   m_Pitch: 1
   Loop: 1
   Mute: 0
