@@ -156,7 +156,6 @@ MonoBehaviour:
   _turboSpeed: 0.07
   _speedRotation: 0.01
   _collisionDamage: 7
-  age: 10
   _maxHealth: 4
   _costpointersScore: 5
   _player: {fileID: 0}

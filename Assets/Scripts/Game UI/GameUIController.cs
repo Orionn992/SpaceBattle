@@ -30,7 +30,11 @@ public class GameUIController : MonoBehaviour
     }
     private void UpdateScore(int score)
     {
-        _countScore.text = score.ToString();
+        if (!_windowGameOver.activeSelf)
+        {
+            _countScore.text = score.ToString();
+        }
+       
     }
     public void ShowWindowGameOver()
     {

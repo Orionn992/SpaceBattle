@@ -156,9 +156,8 @@ MonoBehaviour:
   _turboSpeed: 5
   _speedRotation: 0.01
   _collisionDamage: 7
-  age: 10
   _maxHealth: 2
-  _costpointersScore: 5
+  _costpointersScore: 3
   _player: {fileID: 0}
   _myRoot: {fileID: 0}
   _playerLastPos: {x: 0, y: 1, z: 0}

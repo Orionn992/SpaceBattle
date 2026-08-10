@@ -45,7 +45,7 @@ public class spawnManager : MonoBehaviour
                 var bulletScript = bullet.GetComponent<Bullet>();
                 bulletScript.PutMe.Subscribe(PutObject).AddTo(_disposables);
             }
-            bullet.transform.parent = _poolBulletMy;
+            bullet.transform.parent = transform;
             var position = enemyTransform.transform.position;
             bullet.transform.position = new Vector3(position.x, position.y -1.2f, 0);
         }
@@ -125,7 +125,6 @@ public class spawnManager : MonoBehaviour
         var objShip = mono as BaseEnemyShip;
         if (objShip != null)
         {
-            Controller.Instance.Score.Value += objShip.CostpointersScore;
             objShip.transform.parent = objShip._myRoot;
             objShip.gameObject.SetActive(false);
         }

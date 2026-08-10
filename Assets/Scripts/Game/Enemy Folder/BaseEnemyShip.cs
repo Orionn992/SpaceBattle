@@ -18,7 +18,7 @@ public abstract class BaseEnemyShip : MonoBehaviour
     [SerializeField] private float _delayTurbo = 2;
     [SerializeField] private float _turboSpeed = 5;
     [SerializeField] private float _speedRotation = 0.01f;
-    [SerializeField] private int _collisionDamage, age = 10;
+    [SerializeField] private int _collisionDamage = 10;
     [SerializeField] private int _maxHealth = 2;
     [SerializeField] private int _costpointersScore = 5;
 
@@ -120,6 +120,7 @@ public abstract class BaseEnemyShip : MonoBehaviour
         if (obj.CompareTag("Player"))
         {
             obj.GetComponent<PlayerShip>().DamageMe(_collisionDamage);
+            Controller.Instance.Score.Value += (_costpointersScore/2);
             _putMe.OnNext(this);
         }
     }
@@ -129,6 +130,7 @@ public abstract class BaseEnemyShip : MonoBehaviour
         if(_health <= 0)
         {
             _health = _maxHealth;
+            Controller.Instance.Score.Value += _costpointersScore;
             _putMe.OnNext(this);
         }
     }
