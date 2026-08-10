@@ -4,6 +4,8 @@ using System;
 
 public class Controller : MonoBehaviour
 {
+    public HealthBonus _healthBonusPref;
+    public int _procentHealthBonus = 30;
     [SerializeField] private AudioSource _musicSource;
     [SerializeField] private AudioSource _effectSource;
 

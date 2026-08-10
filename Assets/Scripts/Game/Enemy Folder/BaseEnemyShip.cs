@@ -120,8 +120,16 @@ public abstract class BaseEnemyShip : MonoBehaviour
         if (obj.CompareTag("Player"))
         {
             obj.GetComponent<PlayerShip>().DamageMe(_collisionDamage);
-            Controller.Instance.Score.Value += (_costpointersScore/2);
+            Controller.Instance.Score.Value += (_costpointersScore / 2);
             _putMe.OnNext(this);
+        }
+    }
+    private void SpawnBonus()
+    {
+        var random = UnityEngine.Random.Range(0, 100);
+        if (random < Controller.Instance._procentHealthBonus)
+        {
+            Instantiate(Controller.Instance._healthBonusPref, transform.position, new Quaternion(0, 0, 0, 0));
         }
     }
     private void DamageMe(int damage, BaseEnemyShip baseEnemy)
@@ -130,6 +138,7 @@ public abstract class BaseEnemyShip : MonoBehaviour
         if(_health <= 0)
         {
             _health = _maxHealth;
+            SpawnBonus();
             Controller.Instance.Score.Value += _costpointersScore;
             _putMe.OnNext(this);
         }

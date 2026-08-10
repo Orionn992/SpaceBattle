@@ -103,5 +103,15 @@ public class PlayerShip : MonoBehaviour
             DamageMe(bull._damage);
             bull.HitMe();
         }
+        if (obj.CompareTag("AddHealth"))
+        {
+            var bonus = obj.GetComponent<HealthBonus>();
+            _health.Value += bonus.Health;
+            if (_health.Value > _maxHealth)
+            {
+                _health.Value = _maxHealth;
+            }
+            Destroy(obj);
+        }
     }
 }
