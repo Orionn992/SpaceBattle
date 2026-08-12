@@ -10,7 +10,7 @@ public class GameUIController : MonoBehaviour
     [SerializeField] TextMeshProUGUI _countScore;
     [SerializeField] Slider _barHealth;
     [SerializeField] TextMeshProUGUI _countScoreWindowGameOver;
-     [SerializeField] GameObject _windowGameOver;
+    [SerializeField] GameObject _windowGameOver;
 
     private CompositeDisposable _disposables;
 
