@@ -8,6 +8,7 @@ public class Controller : MonoBehaviour
     public int _procentHealthBonus = 30;
     [SerializeField] private AudioSource _musicSource;
     [SerializeField] private AudioSource _effectSource;
+    [SerializeField] private AudioClip _clipShot;
 
     public ReactiveProperty<int> Score = new ReactiveProperty<int>();
     public AudioSource MusicSource => _musicSource;
@@ -29,7 +30,7 @@ public class Controller : MonoBehaviour
     public Vector2 CentrCam => _centrCam;
     private Subject<Unit> _gameOver = new Subject<Unit>();
     public IObservable<Unit> OnGameOver => _gameOver;
-    
+
     private void Awake()
     {
         if (Instance == null)
@@ -41,6 +42,10 @@ public class Controller : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+    public void PlayAudioShot()
+    {
+        _effectSource.PlayOneShot(_clipShot);
     }
 
     public void UpdateCameraSettings()

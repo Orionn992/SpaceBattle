@@ -33,6 +33,8 @@ public class spawnManager : MonoBehaviour
     public void SpawnBullet(Transform enemyTransform = null, Bullet enemyBullet = null)
     {
         GameObject bullet;
+
+        Controller.Instance.PlayAudioShot();
         if (enemyBullet != null && enemyTransform != null)
         {
             if (_poolEnemyBullet.childCount > 0)

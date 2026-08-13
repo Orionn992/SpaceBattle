@@ -7,6 +7,7 @@ using System.Diagnostics;
 public class Bullet : MonoBehaviour
 {
     [SerializeField] private float _speed = 14;
+    [SerializeField] private GameObject _destroyEffect;
     public int _damage = 3;
     private Subject<MonoBehaviour> _putMe = new Subject<MonoBehaviour>();
     public IObservable<MonoBehaviour> PutMe => _putMe;
@@ -22,7 +23,7 @@ public class Bullet : MonoBehaviour
     {
         if (_isEnemy)
         {
-                while (transform.position.y > -_goTo)
+            while (transform.position.y > -_goTo)
             {
                 transform.position -= new Vector3(0, Time.deltaTime * _speed, 0);
                 yield return null;
@@ -31,18 +32,20 @@ public class Bullet : MonoBehaviour
         else
         {
             while (transform.position.y < _goTo)
-        {
-            transform.position += new Vector3(0, Time.deltaTime * _speed, 0);
-            yield return null;
+            {
+                transform.position += new Vector3(0, Time.deltaTime * _speed, 0);
+                yield return null;
+            }
         }
-        }
-        
+
         _putMe.OnNext(this);
     }
 
     public void HitMe()
     {
         _putMe.OnNext(this);
+        var pos = transform.position;
+        Instantiate(_destroyEffect, new Vector3 (pos.x, pos.y, -2), transform.rotation);
     }
 
     private void OnDisable()

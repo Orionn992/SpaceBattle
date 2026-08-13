@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerShip : MonoBehaviour
 {
+    [SerializeField] private ParticleSystem[] _effects;
     [SerializeField] private float _speed = 15;
     [SerializeField] private float _coolDown = 0.1f;
     public int _maxHealth = 100;
@@ -69,10 +70,33 @@ public class PlayerShip : MonoBehaviour
     {
         float moveHor = Input.GetAxis("Horizontal");
         float moveVert = Input.GetAxis("Vertical");
+
+        if (moveVert > 0) _effects[4].Play();
+        else { _effects[4].Stop(); }
+        if (moveVert < 0)
+        {
+            _effects[2].Play();
+            _effects[3].Play();
+        }
+        else
+        {
+            _effects[2].Stop();
+            _effects[3].Stop();
+        }
+        if (moveHor > 0) _effects[0].Play();
+        else _effects[0].Stop();
+        if (moveHor < 0) _effects[1].Play();
+        else _effects[1].Stop();
+
         _rigidbody.linearVelocity = Vector2.Lerp(_rigidbody.linearVelocity, new Vector2(moveHor * _speed * 1.2f, moveVert * _speed), _smothness);
         transform.position = CheckBoardWorld();
         var targetRotation = Quaternion.Euler(0, 180 + (-moveHor * _shipRollEuler), 0);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, _shipRollSpeed * Time.deltaTime);
+
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            LevelManager.PlayScene(Scenes.MainMenu);
+        }
     }
     private Vector3 CheckBoardWorld()
     {

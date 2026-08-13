@@ -21,6 +21,8 @@ public abstract class BaseEnemyShip : MonoBehaviour
     [SerializeField] private int _collisionDamage = 10;
     [SerializeField] private int _maxHealth = 2;
     [SerializeField] private int _costpointersScore = 5;
+    [SerializeField] private ParticleSystem _fireEngine;
+    [SerializeField] private GameObject _destroyEffect;
 
     public int CostpointersScore => _costpointersScore;
 
@@ -39,6 +41,7 @@ public abstract class BaseEnemyShip : MonoBehaviour
     private IEnumerator Core()
     {
         UpdateStage(StageShip.In);
+        _fireEngine.Play();
         while (transform.position.y > _goToPointTurbo)
         {
             transform.position -= new Vector3(0, Time.deltaTime * _normanSpeed, 0);
@@ -46,12 +49,14 @@ public abstract class BaseEnemyShip : MonoBehaviour
             yield return null;
         }
         UpdateStage(StageShip.Wait);
+        _fireEngine.Stop();
         while (_timerDelay < _delayTurbo)
         {
             _timerDelay += Time.deltaTime;
             yield return null;
         }
         UpdateStage(StageShip.Out);
+        _fireEngine.Play();
         if (_playerLastPos != Vector3.up)
         {
             var dir = DirectionToPlayer / DirectionToPlayer.magnitude;
@@ -121,6 +126,7 @@ public abstract class BaseEnemyShip : MonoBehaviour
         {
             obj.GetComponent<PlayerShip>().DamageMe(_collisionDamage);
             Controller.Instance.Score.Value += (_costpointersScore / 2);
+            SpawnDestroyEffect();
             _putMe.OnNext(this);
         }
     }
@@ -132,6 +138,12 @@ public abstract class BaseEnemyShip : MonoBehaviour
             Instantiate(Controller.Instance._healthBonusPref, transform.position, new Quaternion(0, 0, 0, 0));
         }
     }
+
+    private void SpawnDestroyEffect()
+    {
+        var pos = transform.position;
+        Instantiate(_destroyEffect, new Vector3(pos.x, pos.y, -2), transform.rotation);
+    }
     private void DamageMe(int damage, BaseEnemyShip baseEnemy)
     {
         _health -= damage;
@@ -139,6 +151,7 @@ public abstract class BaseEnemyShip : MonoBehaviour
         {
             _health = _maxHealth;
             SpawnBonus();
+            SpawnDestroyEffect();
             Controller.Instance.Score.Value += _costpointersScore;
             _putMe.OnNext(this);
         }
